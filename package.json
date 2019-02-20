@@ -1,0 +1,23 @@
+{
+  "name": "friend_finder",
+  "version": "1.0.0",
+  "description": "A Node and Express Servers Application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DavidWeid/Friend_Finder.git"
+  },
+  "author": "David Weid",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DavidWeid/Friend_Finder/issues"
+  },
+  "homepage": "https://github.com/DavidWeid/Friend_Finder#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "path": "^0.12.7"
+  }
+}
