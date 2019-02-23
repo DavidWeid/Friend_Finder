@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Friend Finder</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!--CSS Reset-->
+    <style>
+        html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+            margin:0;
+            padding:0;
+            border:0;
+            outline:0;
+            font-size:100%;
+            vertical-align:baseline;
+            background:transparent;
+        }
+        body {
+            line-height:1;
+        }
+        article,aside,details,figcaption,figure, footer,header,hgroup,menu,nav,section { 
+            display:block;
+        }
+
+        nav ul {
+            list-style:none;
+        }
+
+        blockquote, q {
+            quotes:none;
+        }
+
+        blockquote:before, blockquote:after, q:before, q:after {
+            content:'';
+            content:none;
+        }
+
+        a {
+            margin:0;
+            padding:0;
+            font-size:100%;
+            vertical-align:baseline;
+            background:transparent;
+        }
+
+        /* change colours to suit your needs */
+        ins {
+            background-color: ghostwhite;
+            color: black;
+            text-decoration:none;
+        }
+
+        /* change colours to suit your needs */
+        mark {
+            background-color: ghostwhite;
+            color: black; 
+            font-style:italic;
+            font-weight:bold;
+        }
+
+        del {
+            text-decoration: line-through;
+        }
+
+        abbr[title], dfn[title] {
+            border-bottom:1px dotted;
+            cursor:help;
+        }
+
+        table {
+            border-collapse:collapse;
+            border-spacing:0;
+        }
+
+        /* change border colour to suit your needs */
+        hr {
+            display:block;
+            height:1px;
+            border:0;   
+            border-top:1px solid #cccccc;
+            margin:1em 0;
+            padding:0;
+        }
+
+        input, select {
+            vertical-align:middle;
+        }
+    </style>
+
+    <!--Materialize CSS CDN-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"/>
+    <!--Google Materialize Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Fahkwang|Major+Mono+Display|Open+Sans:300|Roboto" rel="stylesheet"/>
+
+    <!--My CSS-->
+    <style>
+    
+        /* Style */
+    
+    </style>
+    <!--My CSS End-->
+
+  </head>
+
+  <body>
+
+    <!---------- Page Content ---------->
+
+    <a href="/">Home Page</a>
+    <br/><br/><br/><br/><br/><br/><br/><br/>
+    <a href="/api/friends">API Friends List</a>
+
+    <!---------- Page Content End ---------->
+
+    <!--jQuery-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <!--Materialize JS CDN-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!--My JS-->
+    <script>
+
+        // POST survey and user data to the express server
+        // jQuery grabs user data from form via "Submit" on-click and sends POST request to Friends API (/api/friends)
+        // Code in apiRoutes.js is run and saves friendData to friends.js (friendsArray)
+
+        $("#submit").on("click", function(e) {
+            e.preventDefault();
+
+            var newFriend = {
+                name: $("#").val().trim(),
+                photo: $("#").val().trim(),
+                scores: ""
+            };
+
+            console.log("New Friend: " + newFriend);
+
+            $.post("/api/friends", newFriend, function(data) {
+                console.log("New friend Sent");
+
+                // Clear form
+                $("#").val("");
+                $("#").val("");
+            });
+        });
+
+        // jQuery used to "download" data from server
+        // Dynamically display content for user
+
+        function runFriendQuery() {
+
+            // AJAX function uses API URL to GET data in friends.js
+            $.ajax({ url: "/api/friends", method: "GET" }).then(function(friendsData) {
+    
+                // Result of console log is an array (friendsArray)
+                console.log(friendsData);
+                console.log(" ");
+            });
+        }
+
+runFriendQuery();
+
+    </script>
+
+  </body>
+</html>

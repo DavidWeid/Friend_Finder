@@ -23,6 +23,8 @@ module.exports = function(app) {
 
     // Route
     app.post("/api/friends", function(req, res) {
+        friendsData.push(req.body);
+        res.json(friendsData);
         // Send data to server, then return something to user (i.e. res.json(true))
     });
 };
