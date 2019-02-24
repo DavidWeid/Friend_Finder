@@ -100,8 +100,15 @@
     <style>
     
         body, html {
-            font-family: "Open Sans", sans-serif;
             height: 100%;
+            font-family: "Open Sans", sans-serif;
+            line-height: 150%;
+            font-weight: 600;
+            font-size: 110%;
+        }
+
+        a {
+            color: rgba(162, 48, 36, 1.0);
         }
 
         .main-row {
@@ -116,11 +123,34 @@
 
         .home-content {
             position: absolute;
-            left: 25%;
-            top: 40%;
-            width: 50%;
-            background-color: lightgray;
+            left: 30%;
+            top: 25%;
+            width: 40%;
             margin: 0 auto;
+            background-color: lightgray;
+            padding: 24px;
+            opacity: 0.90;
+            border-radius: 24px;
+        } .home-content:hover {
+            opacity: 0.95;
+        } .home-content:after {
+            content: "";
+            display: block;
+            margin: 0 auto;
+            padding-bottom: 24px;
+            width: 75%;
+            border-bottom: 2px solid rgba(40, 114, 131, 1.0);
+        }
+
+        #start-btn {
+            background-color: rgba(40, 114, 131, 1.0);
+            /* color:rgba(207, 194, 53, 1.0); */
+            /* color: rgba(255, 240, 91, 1.0); */
+        }
+
+        #api-link, #github-link {
+            font-size: 100%;
+            padding: 12px;
         }
     
     </style>
@@ -134,11 +164,16 @@
 
     <div class="main-row">
     
-        <div class="home-content">
+        <div class="home-content center-align hoverable">
 
-            <a href="/survey">Survey</a>
-            <br/><br/><br/><br/><br/><br/><br/><br/>
-            <a href="/api/friends">API Friends List</a>
+            <h2>Hero Finder</h2>
+            <h4>Complete some simple questions!</h4>
+            <h4>Find the Hero for you!</h4>
+            <br/>
+            <a href="/survey" class="waves-effect waves-light btn-large hoverable" id="start-btn"><i class="material-icons left">assignment</i>Begin!</a> <!--create, description-->
+            <br/><br/><br/><br/><br/><br/>
+            <a href="/api/friends" id="api-link">API Friends List</a>
+            <a href="#" id="github-link">GitHub Repo</a>
 
         </div>
 
