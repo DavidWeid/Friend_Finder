@@ -99,7 +99,29 @@
     <!--My CSS-->
     <style>
     
-        /* Style */
+        body, html {
+            font-family: "Open Sans", sans-serif;
+            height: 100%;
+        }
+
+        .main-row {
+            position: relative;
+            height: 100%;
+            background-image: url("https://images7.alphacoders.com/976/976486.png");
+            /* background-image: url("https://images3.alphacoders.com/859/859804.png"); */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .home-content {
+            position: absolute;
+            left: 25%;
+            top: 40%;
+            width: 50%;
+            background-color: lightgray;
+            margin: 0 auto;
+        }
     
     </style>
     <!--My CSS End-->
@@ -110,10 +132,17 @@
 
     <!---------- Page Content ---------->
 
-    <a href="/survey">Survey</a>
-    <br/><br/><br/><br/><br/><br/><br/><br/>
-    <a href="/api/friends">API Friends List</a>
+    <div class="main-row">
+    
+        <div class="home-content">
 
+            <a href="/survey">Survey</a>
+            <br/><br/><br/><br/><br/><br/><br/><br/>
+            <a href="/api/friends">API Friends List</a>
+
+        </div>
+
+    </div>
     <!---------- Page Content End ---------->
 
     <!--jQuery-->
