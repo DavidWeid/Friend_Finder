@@ -514,7 +514,18 @@
         </div>
 
         <div class="row submit-row">
-            <button class="waves-effect waves-light btn-large hoverable" id="submit-btn"><i class="fab fa-galactic-senate" id="submit-icon"></i>Submit</button>
+            <button data-target="modal1" class="modal-trigger waves-effect waves-light btn-large hoverable" id="submit-btn"><i class="fab fa-galactic-senate" id="submit-icon"></i>Submit</button>
+        </div>
+
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <h5>Your Hero Match</h5>
+                <h4 id="match-name">Hero Name Here</h4>
+                <img id="match-image" alt="">
+            </div>
+            <div class="modal-footer">
+                <a href="" class="modal-close waves-effect waves-light btn-flat">Close</a>
+            </div>
         </div>
 
         <div class="footer-row row right-align">
@@ -539,12 +550,11 @@
         // jQuery grabs user data from form via "Submit" on-click and sends POST request to Friends API (/api/friends)
         // Code in apiRoutes.js is run and saves friendData to friends.js (friendsArray)
 
-        $("#submit-btn").on("click", function() {
+        $(document).ready(function(){
+            $(".modal").modal();
+        });
 
-            // var q1 = $("input[name='group1']:checked").val();
-            // if (q1) {
-            //     console.log(q1);
-            // };
+        $("#submit-btn").on("click", function() {
 
             var userAnswers = [];
 
@@ -579,6 +589,10 @@
                     $("input[name=" + ("group" + i) + "]:checked").prop("checked", false);
 
                 }
+
+                $("#match-name").text(data.name);
+
+                $("#match-image").attr("src", data.photo);
                 
             })
 
