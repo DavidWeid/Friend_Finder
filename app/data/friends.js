@@ -2,86 +2,85 @@
 
 var friendsArray = [
     {
-        name: "Troye Sivan",
-        photo: "https://www.instagram.com/p/BnPybyRBbiP/?utm_source=ig_web_button_share_sheet",
+        name: "Deku",
+        photo: "https://vignette.wikia.nocookie.net/bokunoheroacademia/images/5/5c/Izuku_Midoriya_school_headshot.png/revision/latest?cb=20180515143811",
         scores: [
             1,
             3,
-            2,
-            5,
-            5,
-            5,
             4,
-            3,
+            1,
+            2,
+            1,
+            4,
+            1,
             5,
             3
         ]
     },
     {
-        name: "Tom Holland",
-        photo: "https://www.instagram.com/p/BoYN6ODFUu1/?utm_source=ig_web_button_share_sheet",
+        name: "Bakugo",
+        photo: "https://vignette.wikia.nocookie.net/bokunoheroacademia/images/7/7e/Katsuki_school.png/revision/latest?cb=20180223024521",
+        scores: [
+            1,
+            5,
+            1,
+            3,
+            5,
+            3,
+            1,
+            4,
+            2,
+            1
+        ]
+    },
+    {
+        name: "Uraraka",
+        photo: "https://vignette.wikia.nocookie.net/bokunoheroacademia/images/6/6b/Ochaco_school_headshot.png/revision/latest?cb=20180423205238",
         scores: [
             2,
-            3,
-            5,
-            5,
-            3,
+            1,
             4,
-            4,
+            2,
+            1,
+            2,
+            5,
             2,
             5,
             3
         ]
     },
     {
-        name: "Jacob Bixenman",
-        photo: "https://www.instagram.com/p/Bngpg5Ah2IH/?utm_source=ig_web_button_share_sheet",
+        name: "Mt. Lady",
+        photo: "https://vignette.wikia.nocookie.net/bokunoheroacademia/images/1/1a/Mt._Lady_takes_credit.png/revision/latest?cb=20160617233300",
         scores: [
             3,
+            3,
+            2,
             2,
             1,
+            1,
+            2,
             3,
-            4,
-            4,
-            5,
-            4,
-            4,
-            4
+            1,
+            2
         ]
     },
     {
-        name: "Brandon Flynn",
-        photo: "https://www.instagram.com/p/BnkDtWJABRS/?utm_source=ig_web_button_share_sheet",
+        name: "Midnight",
+        photo: "https://vignette.wikia.nocookie.net/bokunoheroacademia/images/c/c3/Midnight_headshot.png/revision/latest?cb=20171015184312",
         scores: [
             4,
             3,
+            4,
             2,
-            4,
-            5,
             3,
+            1,
+            1,
             4,
-            4,
-            4,
+            2,
             4
         ]
     }
-    // ,
-    // {
-    //     name: "Gehe",
-    //     photo: "https://www.instagram.com/p/BrXyaLlFYfr/?utm_source=ig_web_button_share_sheet",
-    //     scores: [
-    //         4,
-    //         3,
-    //         2,
-    //         4,
-    //         5,
-    //         3,
-    //         4,
-    //         3,
-    //         5,
-    //         5
-    //     ]
-    // }
 ];
 
 // Export array
