@@ -24,8 +24,36 @@ module.exports = function(app) {
     // Route
     app.post("/api/friends", function(req, res) {
         var newFriend = req.body;
+
+        var comparisonArray = [];
+
+        for (var i = 0; i < friendsData.length; i++) {
+            var difArray = [];
+
+            for (var j = 0; j < newFriend.scores.length; j++) {
+                var dif = newFriend.scores[j] - friendsData[i].scores[j];
+                difArray.push(Math.abs(dif));
+            }
+
+            var sum = difArray.reduce(add);
+
+            function add(accumulator, a) {
+                return accumulator + a;
+            }
+
+            comparisonArray.push(sum);
+        };
+
+        var min = Math.min.apply(Math, comparisonArray);
+
+        var minIndex = comparisonArray.indexOf(min);
+
+        var bestMatch = friendsData[minIndex];
+
+        console.log(bestMatch);
+
         friendsData.push(newFriend);
-        res.json(friendsData);
-        // Send data to server, then return something to user (i.e. res.json(true))
+
+        res.json(bestMatch);
     });
 };

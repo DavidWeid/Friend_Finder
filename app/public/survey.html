@@ -93,14 +93,93 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"/>
     <!--Google Materialize Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <!--Font Awesome Icons-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <!--Google Fonts-->
     <link href="https://fonts.googleapis.com/css?family=Fahkwang|Major+Mono+Display|Open+Sans:300|Roboto" rel="stylesheet"/>
 
     <!--My CSS-->
     <style>
+
+        body, html {
+            height: 100%;
+            font-family: "Open Sans", sans-serif;
+            line-height: 150%;
+            font-weight: 600;
+            font-size: 110%;
+        }
+
+        a {
+            color: rgba(162, 48, 36, 1.0);
+        }
     
-        /* Style */
-    
+        #api-link, #github-link, #home-link {
+            font-size: 100%;
+            padding: 12px;
+        }
+
+        .input-field label {
+            color: #000;
+        }
+        .input-field input[type=text]:focus + label {
+            color: #000;
+        }
+        .input-field input[type=text]:focus {
+            border-bottom: 1px solid #000;
+            box-shadow: 0 1px 0 0 #000;
+        }
+        .input-field input[type=text].valid {
+            border-bottom: 1px solid #000;
+            box-shadow: 0 1px 0 0 #000;
+        }
+        .input-field input [type=text].invalid {
+            border-bottom: 1px solid #000;
+            box-shadow: 0 1px 0 0 #000;
+        }
+        .input-field .prefix.active {
+            color: #000;
+        }
+
+        .name-row {
+            margin-bottom: 0;
+        }
+
+        .photo-url-row {
+            margin-top: 0;
+        }
+
+        .title-row, .header-row, .submit-row {
+            border-bottom: 2px solid rgba(162, 48, 36, 1.0);
+        }
+
+        label {
+            color: rgba(40, 114, 131, 1.0);
+            font-weight: bolder;
+            padding-right: 30px;
+        }
+
+        .radio-label {
+            font-size: 60%;
+        }
+
+        .question-row {
+            padding-bottom: 12px;
+            border-bottom: 1px solid rgba(162, 48, 36, 0.9);
+        }
+
+        .submit-row {
+            padding-bottom: 24px;
+        }
+
+        #submit-btn {
+            background-color: rgba(40, 114, 131, 1.0);
+        }
+
+        #submit-icon {
+            font-weight: 100;
+            margin-right: 12px;
+        }
+
     </style>
     <!--My CSS End-->
 
@@ -110,9 +189,341 @@
 
     <!---------- Page Content ---------->
 
-    <a href="/">Home Page</a>
-    <br/><br/><br/><br/><br/><br/><br/><br/>
-    <a href="/api/friends">API Friends List</a>
+    <div class="container">
+
+        <div class="title-row row">
+            <h3>Survey Questions</h3>
+        </div>
+
+        <div class="row header-row">
+            <h5>Who are you, Hero?</h5>
+
+            <form class="col s12">
+                <div class="row name-row">
+                    <div class="input-field col s12 name-row">
+                        <input placeholder="Hero Name" id="name" type="text"/>
+                    </div>
+                </div>
+
+                <div class="row photo-url-row">
+                    <div class="input-field col s12 photo-url-row">
+                        <input placeholder="Link to Self Photo" id="photo-url" type="text"/>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="row question-row">
+
+            <h5>Question 1</h5>
+            <p class="question-p">First question goes here</p>
+            <p class="radio-label">1 Strongly Agree :: 5 Strongly Disagree</p>
+            <form action="#">
+                <label>
+                    <input name="group1" type="radio" value="1"/>
+                    <span>1</span> 
+                </label>
+                <label>
+                    <input name="group1" type="radio" value="2"/>
+                    <span>2</span> 
+                </label>
+                <label>
+                    <input name="group1" type="radio" value="3"/>
+                    <span>3</span> 
+                </label>
+                <label>
+                    <input name="group1" type="radio" value="4"/>
+                    <span>4</span> 
+                </label>
+                <label>
+                    <input name="group1" type="radio" value="5"/>
+                    <span>5</span> 
+                </label>
+            </form>
+
+        </div>
+
+        <div class="row question-row">
+
+            <h5>Question 2</h5>
+            <p class="question-p">Second question goes here</p>
+            <p class="radio-label">1 Strongly Agree :: 5 Strongly Disagree</p>
+            <form action="#">
+                <label>
+                    <input name="group2" type="radio" value="1"/>
+                    <span>1</span> 
+                </label>
+                <label>
+                    <input name="group2" type="radio" value="2"/>
+                    <span>2</span> 
+                </label>
+                <label>
+                    <input name="group2" type="radio" value="3"/>
+                    <span>3</span> 
+                </label>
+                <label>
+                    <input name="group2" type="radio" value="4"/>
+                    <span>4</span> 
+                </label>
+                <label>
+                    <input name="group2" type="radio" value="5"/>
+                    <span>5</span> 
+                </label>
+            </form>
+    
+        </div>
+
+        <div class="row question-row">
+
+            <h5>Question 3</h5>
+            <p class="question-p">Third question goes here</p>
+            <p class="radio-label">1 Strongly Agree :: 5 Strongly Disagree</p>
+            <form action="#">
+                <label>
+                    <input name="group3" type="radio" value="1"/>
+                    <span>1</span> 
+                </label>
+                <label>
+                    <input name="group3" type="radio" value="2"/>
+                    <span>2</span> 
+                </label>
+                <label>
+                    <input name="group3" type="radio" value="3"/>
+                    <span>3</span> 
+                </label>
+                <label>
+                    <input name="group3" type="radio" value="4"/>
+                    <span>4</span> 
+                </label>
+                <label>
+                    <input name="group3" type="radio" value="5"/>
+                    <span>5</span> 
+                </label>
+            </form>
+    
+        </div>
+    
+        <div class="row question-row">
+
+            <h5>Question 4</h5>
+            <p class="question-p"> Fourth question goes here</p>
+            <p class="radio-label">1 Strongly Agree :: 5 Strongly Disagree</p>
+            <form action="#">
+                <label>
+                    <input name="group4" type="radio" value="1"/>
+                    <span>1</span> 
+                </label>
+                <label>
+                    <input name="group4" type="radio" value="2"/>
+                    <span>2</span> 
+                </label>
+                <label>
+                    <input name="group4" type="radio" value="3"/>
+                    <span>3</span> 
+                </label>
+                <label>
+                    <input name="group4" type="radio" value="4"/>
+                    <span>4</span> 
+                </label>
+                <label>
+                    <input name="group4" type="radio" value="5"/>
+                    <span>5</span> 
+                </label>
+            </form>
+    
+        </div>
+
+        <div class="row question-row">
+
+            <h5>Question 5</h5>
+            <p class="question-p">Fifth question goes here</p>
+            <p class="radio-label">1 Strongly Agree :: 5 Strongly Disagree</p>
+            <form action="#">
+                <label>
+                    <input name="group5" type="radio" value="1"/>
+                    <span>1</span> 
+                </label>
+                <label>
+                    <input name="group5" type="radio" value="2"/>
+                    <span>2</span> 
+                </label>
+                <label>
+                    <input name="group5" type="radio" value="3"/>
+                    <span>3</span> 
+                </label>
+                <label>
+                    <input name="group5" type="radio" value="4"/>
+                    <span>4</span> 
+                </label>
+                <label>
+                    <input name="group5" type="radio" value="5"/>
+                    <span>5</span> 
+                </label>
+            </form>
+        
+        </div>
+
+        <div class="row question-row">
+
+            <h5>Question 6</h5>
+            <p class="question-p">Sixth question goes here</p>
+            <p class="radio-label">1 Strongly Agree :: 5 Strongly Disagree</p>
+            <form action="#">
+                <label>
+                    <input name="group6" type="radio" value="1"/>
+                    <span>1</span> 
+                </label>
+                <label>
+                    <input name="group6" type="radio" value="2"/>
+                    <span>2</span> 
+                </label>
+                <label>
+                    <input name="group6" type="radio" value="3"/>
+                    <span>3</span> 
+                </label>
+                <label>
+                    <input name="group6" type="radio" value="4"/>
+                    <span>4</span> 
+                </label>
+                <label>
+                    <input name="group6" type="radio" value="5"/>
+                    <span>5</span> 
+                </label>
+            </form>
+    
+        </div>
+    
+        <div class="row question-row">
+
+            <h5>Question 7</h5>
+            <p class="question-p">Seventh question goes here</p>
+            <p class="radio-label">1 Strongly Agree :: 5 Strongly Disagree</p>
+            <form action="#">
+                <label>
+                    <input name="group7" type="radio" value="1"/>
+                    <span>1</span> 
+                </label>
+                <label>
+                    <input name="group7" type="radio" value="2"/>
+                    <span>2</span> 
+                </label>
+                <label>
+                    <input name="group7" type="radio" value="3"/>
+                    <span>3</span> 
+                </label>
+                <label>
+                    <input name="group7" type="radio" value="4"/>
+                    <span>4</span> 
+                </label>
+                <label>
+                    <input name="group7" type="radio" value="5"/>
+                    <span>5</span> 
+                </label>
+            </form>
+    
+        </div>
+    
+        <div class="row question-row">
+
+            <h5>Question 8</h5>
+            <p class="question-p">Eighth question goes here</p>
+            <p class="radio-label">1 Strongly Agree :: 5 Strongly Disagree</p>
+            <form action="#">
+                <label>
+                    <input name="group8" type="radio" value="1"/>
+                    <span>1</span> 
+                </label>
+                <label>
+                    <input name="group8" type="radio" value="2"/>
+                    <span>2</span> 
+                </label>
+                <label>
+                    <input name="group8" type="radio" value="3"/>
+                    <span>3</span> 
+                </label>
+                <label>
+                    <input name="group8" type="radio" value="4"/>
+                    <span>4</span> 
+                </label>
+                <label>
+                    <input name="group8" type="radio" value="5"/>
+                    <span>5</span> 
+                </label>
+            </form>
+    
+        </div>
+        
+        <div class="row question-row">
+
+            <h5>Question 9</h5>
+            <p class="question-p">Ninth question goes here</p>
+            <p class="radio-label">1 Strongly Agree :: 5 Strongly Disagree</p>
+            <form action="#">
+                <label>
+                    <input name="group9" type="radio" value="1"/>
+                    <span>1</span> 
+                </label>
+                <label>
+                    <input name="group9" type="radio" value="2"/>
+                    <span>2</span> 
+                </label>
+                <label>
+                    <input name="group9" type="radio" value="3"/>
+                    <span>3</span> 
+                </label>
+                <label>
+                    <input name="group9" type="radio" value="4"/>
+                    <span>4</span> 
+                </label>
+                <label>
+                    <input name="group9" type="radio" value="5"/>
+                    <span>5</span> 
+                </label>
+            </form>
+    
+        </div>
+    
+        <div class="row question-row">
+
+            <h5>Question 10</h5>
+            <p class="question-p">Tenth question goes here</p>
+            <p class="radio-label">1 Strongly Agree :: 5 Strongly Disagree</p>
+            <form action="#">
+                <label>
+                    <input name="group10" type="radio" value="1"/>
+                    <span>1</span> 
+                </label>
+                <label>
+                    <input name="group10" type="radio" value="2"/>
+                    <span>2</span> 
+                </label>
+                <label>
+                    <input name="group10" type="radio" value="3"/>
+                    <span>3</span> 
+                </label>
+                <label>
+                    <input name="group10" type="radio" value="4"/>
+                    <span>4</span> 
+                </label>
+                <label>
+                    <input name="group10" type="radio" value="5"/>
+                    <span>5</span> 
+                </label>
+            </form>
+        
+        </div>
+
+        <div class="row submit-row">
+            <button class="waves-effect waves-light btn-large hoverable" id="submit-btn"><i class="fab fa-galactic-senate" id="submit-icon"></i>Submit</button>
+        </div>
+
+        <div class="footer-row row right-align">
+            <a href="/"id="home-link"><i class="fas fa-home"></i></a>
+            <a href="/api/friends" id="api-link"><i class="fas fa-list"></i> Heros</a>
+            <a href="https://github.com/DavidWeid/Friend_Finder.git" id="github-link"><i class="fab fa-github"></i></a>
+        </div>
+
+    </div>
 
     <!---------- Page Content End ---------->
 
@@ -128,25 +539,49 @@
         // jQuery grabs user data from form via "Submit" on-click and sends POST request to Friends API (/api/friends)
         // Code in apiRoutes.js is run and saves friendData to friends.js (friendsArray)
 
-        $("#submit").on("click", function(e) {
-            e.preventDefault();
+        $("#submit-btn").on("click", function() {
+
+            // var q1 = $("input[name='group1']:checked").val();
+            // if (q1) {
+            //     console.log(q1);
+            // };
+
+            var userAnswers = [];
+
+            for (var i = 1; i < 11; i++) {
+
+                var x = $("input[name=" + ("group" + i) + "]:checked").val();
+                if (x) {
+                    userAnswers.push(x);
+                }
+
+            }
+
+            console.log(userAnswers);
 
             var newFriend = {
-                name: $("#").val().trim(),
-                photo: $("#").val().trim(),
-                scores: ""
+                name: $("#name").val().trim(),
+                photo: $("#photo-url").val().trim(),
+                scores: userAnswers
             };
 
-            console.log("New Friend: " + newFriend);
+            console.log(newFriend);
 
             $.post("/api/friends", newFriend, function(data) {
-                console.log("New friend Sent");
+                console.log("New friend sent");
                 console.log(data);
 
-                // Clear form
-                $("#").val("");
-                $("#").val("");
-            });
+                $("#name").val("");
+                $("#photo-url").val("");
+
+                for (var i = 1; i < 11; i++) {
+
+                    $("input[name=" + ("group" + i) + "]:checked").prop("checked", false);
+
+                }
+                
+            })
+
         });
 
         // jQuery used to "download" data from server
@@ -163,7 +598,7 @@
             });
         }
 
-runFriendQuery();
+        runFriendQuery();
 
     </script>
 
