@@ -5,15 +5,15 @@ var friendsArray = [
         name: "Deku",
         photo: "https://vignette.wikia.nocookie.net/bokunoheroacademia/images/5/5c/Izuku_Midoriya_school_headshot.png/revision/latest?cb=20180515143811",
         scores: [
-            1,
-            3,
-            4,
-            1,
-            2,
-            1,
-            4,
-            1,
             5,
+            3,
+            2,
+            5,
+            4,
+            5,
+            2,
+            5,
+            1,
             3
         ]
     },
@@ -21,31 +21,31 @@ var friendsArray = [
         name: "Bakugo",
         photo: "https://vignette.wikia.nocookie.net/bokunoheroacademia/images/7/7e/Katsuki_school.png/revision/latest?cb=20180223024521",
         scores: [
-            1,
             5,
             1,
-            3,
             5,
             3,
             1,
-            4,
+            3,
+            5,
             2,
-            1
+            4,
+            5
         ]
     },
     {
         name: "Uraraka",
         photo: "https://vignette.wikia.nocookie.net/bokunoheroacademia/images/6/6b/Ochaco_school_headshot.png/revision/latest?cb=20180423205238",
         scores: [
+            4,
+            5,
             2,
+            4,
+            5,
+            4,
             1,
             4,
-            2,
             1,
-            2,
-            5,
-            2,
-            5,
             3
         ]
     },
@@ -55,30 +55,30 @@ var friendsArray = [
         scores: [
             3,
             3,
-            2,
-            2,
-            1,
-            1,
-            2,
+            4,
+            4,
+            5,
+            5,
+            4,
             3,
-            1,
-            2
+            5,
+            4
         ]
     },
     {
         name: "Midnight",
         photo: "https://vignette.wikia.nocookie.net/bokunoheroacademia/images/c/c3/Midnight_headshot.png/revision/latest?cb=20171015184312",
         scores: [
-            4,
-            3,
-            4,
             2,
             3,
-            1,
-            1,
-            4,
             2,
-            4
+            4,
+            3,
+            5,
+            5,
+            2,
+            4,
+            2
         ]
     }
 ];
