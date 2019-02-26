@@ -1,5 +1,7 @@
 ///// DATA /////
 
+// Default 5 friend objects stored
+// Users get added to array when they fill out the survey
 var friendsArray = [
     {
         name: "Deku",

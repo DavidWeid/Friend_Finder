@@ -20,6 +20,7 @@ require("./app/routing/htmlRoutes")(app);
 
 ///// LISTENER /////
 
+// "node server.js" will start the server
 app.listen(PORT, function() {
     console.log("App online at http://localhost:%s", PORT);
 });
